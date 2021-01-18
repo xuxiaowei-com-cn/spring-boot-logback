@@ -12,6 +12,9 @@
     </appender>
 
     <!-- 扫描的包以及日志等级 -->
+
+    <!-- https://github.com/qos-ch/logback/blob/master/logback-examples/src/main/resources/chapters/configuration/sample3.xml -->
+
     <logger name="org.springframework.web" level="DEBUG"/>
 
     <root level="INFO">
