@@ -4,14 +4,15 @@
 
     <!-- https://github.com/qos-ch/logback/blob/master/logback-examples/src/main/resources/chapters/appenders/conf/logback-Console.xml -->
 
+    <!-- 控制台日志 -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} -%highlight(%5p) %magenta(${PID:- }) --- [%15.15t] %cyan(%-40.40logger{39}) : %m%n
-            </pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} -%highlight(%5p) %magenta(${PID:- }) --- [%15.15t] %cyan(%-40.40logger{39}) : %m%n</pattern>
         </encoder>
     </appender>
 
     <root level="INFO">
+        <!-- 激活：控制台日志 -->
         <appender-ref ref="STDOUT"/>
     </root>
 
