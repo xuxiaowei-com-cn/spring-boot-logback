@@ -24,9 +24,7 @@
     </appender>
 
     <!-- 扫描的包以及日志等级 -->
-    <logger name="org.springframework.web" level="DEBUG">
-        <appender-ref ref="STDOUT"/>
-    </logger>
+    <logger name="org.springframework.web" level="DEBUG"/>
 
     <root level="INFO">
         <!-- 激活：控制台日志 -->
