@@ -19,4 +19,5 @@ spring:
 logging:
   # 配置文件
   # 普通日志：classpath:config/logback.xml
+  # 异步日志文件：classpath:config/logback-async.xml
   config: classpath:config/logback.xml
