@@ -14,3 +14,8 @@ spring:
     password: root
   jpa:
     show-sql: true
+#
+# 日志
+logging:
+  # 配置文件
+  config: classpath:config/logback.xml
