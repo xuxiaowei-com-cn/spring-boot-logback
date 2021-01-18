@@ -1,0 +1,16 @@
+#
+# 配置
+#
+spring:
+  # 数据库 配置
+  datasource:
+    # 连接串
+    url: jdbc:mysql://127.0.0.1:3306/spring-boot-logback?useSSL=false&serverTimezone=GMT%2B8
+    # 驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 用户名
+    username: root
+    # 密码
+    password: root
+  jpa:
+    show-sql: true
