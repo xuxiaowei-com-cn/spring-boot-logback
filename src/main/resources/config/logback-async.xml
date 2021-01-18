@@ -8,6 +8,9 @@
     </appender>
 
     <!-- 日志文件 -->
+
+    <!-- https://github.com/qos-ch/logback/blob/master/logback-examples/src/main/resources/chapters/appenders/conf/logback-async.xml -->
+
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <file>D:\logs\spring-boot-logback.log</file>
         <encoder>
