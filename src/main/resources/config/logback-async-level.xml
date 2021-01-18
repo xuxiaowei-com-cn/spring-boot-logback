@@ -1,0 +1,42 @@
+<configuration>
+
+    <!-- 控制台日志 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} -%highlight(%5p) %magenta(${PID:- }) --- [%15.15t] %cyan(%-40.40logger{39}) : %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志文件 -->
+
+    <!-- https://github.com/qos-ch/logback/blob/master/logback-examples/src/main/resources/chapters/appenders/conf/logback-async.xml -->
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>D:\logs\spring-boot-logback.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} -%5p ${PID:- } --- [%15.15t] %-40.40logger{39} : %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 异步日志文件 -->
+    <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="FILE"/>
+    </appender>
+
+    <!-- 扫描的包以及日志等级 -->
+
+    <!-- https://github.com/qos-ch/logback/blob/master/logback-examples/src/main/resources/chapters/configuration/sample3.xml -->
+
+    <logger name="org.springframework.web" level="DEBUG"/>
+    <!-- 扫描的包以及日志等级输出到文件 -->
+    <logger name="org.springframework.web" level="DEBUG">
+        <!-- 激活：异步日志文件 -->
+        <appender-ref ref="ASYNC"/>
+    </logger>
+
+    <root level="INFO">
+        <!-- 激活：控制台日志 -->
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
