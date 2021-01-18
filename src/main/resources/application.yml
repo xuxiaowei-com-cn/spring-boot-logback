@@ -18,4 +18,5 @@ spring:
 # 日志
 logging:
   # 配置文件
+  # 普通日志：classpath:config/logback.xml
   config: classpath:config/logback.xml

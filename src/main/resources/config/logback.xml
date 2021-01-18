@@ -1,5 +1,7 @@
 <configuration>
 
+    <!-- 普通日志 -->
+
     <!-- https://github.com/qos-ch/logback/blob/master/logback-examples/src/main/resources/chapters/appenders/conf/logback-Console.xml -->
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
