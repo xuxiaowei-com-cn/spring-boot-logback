@@ -27,6 +27,7 @@
 
     <!-- https://github.com/qos-ch/logback/blob/master/logback-examples/src/main/resources/chapters/configuration/sample3.xml -->
 
+    <!-- 由于 <root></root> 设置了文件输出，故此配置也会输出到文件中 -->
     <logger name="org.springframework.web" level="DEBUG"/>
 
     <root level="INFO">
