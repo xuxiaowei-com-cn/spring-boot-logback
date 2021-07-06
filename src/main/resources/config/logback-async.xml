@@ -1,9 +1,19 @@
 <configuration>
 
+    <!-- 日志存放路径 -->
+    <property name="LOG_PATH" value="/logs/spring-boot-logback.log"/>
+    <!-- 日志输出格式-控制台 -->
+    <property name="STDOUT_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} -%highlight(%5p) %magenta(${PID:- }) --- [%15.15t] %cyan(%-40.40logger{39}) : %m%n"/>
+
+    <!-- 日志输出格式-文件 -->
+    <property name="FILE_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} -%5p ${PID:- } --- [%15.15t] %-40.40logger{39} : %m%n"/>
+
     <!-- 控制台日志 -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} -%highlight(%5p) %magenta(${PID:- }) --- [%15.15t] %cyan(%-40.40logger{39}) : %m%n</pattern>
+            <pattern>${STDOUT_PATTERN}</pattern>
         </encoder>
     </appender>
 
@@ -12,9 +22,9 @@
     <!-- https://github.com/qos-ch/logback/blob/master/logback-examples/src/main/resources/chapters/appenders/conf/logback-async.xml -->
 
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>D:\logs\spring-boot-logback.log</file>
+        <file>${LOG_PATH}</file>
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} -%5p ${PID:- } --- [%15.15t] %-40.40logger{39} : %m%n</pattern>
+            <pattern>${FILE_PATTERN}</pattern>
         </encoder>
     </appender>
 
