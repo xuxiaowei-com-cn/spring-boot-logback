@@ -1,4 +1,4 @@
-<configuration>
+<configuration scan="true" scanPeriod="10 seconds">
 
     <!-- 日志存放路径 -->
     <property name="LOG_PATH" value="/logs"/>
