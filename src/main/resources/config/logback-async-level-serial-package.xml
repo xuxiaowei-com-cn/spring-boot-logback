@@ -36,6 +36,14 @@
         </encoder>
     </appender>
 
+    <!-- 日志文件 B -->
+    <appender name="FILE_B" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_PATH}/spring-boot-logback-b.log</file>
+        <encoder>
+            <pattern>${FILE_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
     <!-- 异步日志文件 -->
     <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
         <appender-ref ref="FILE"/>
@@ -44,6 +52,11 @@
     <!-- 异步日志文件 A -->
     <appender name="ASYNC_A" class="ch.qos.logback.classic.AsyncAppender">
         <appender-ref ref="FILE_A"/>
+    </appender>
+
+    <!-- 异步日志文件 B -->
+    <appender name="ASYNC_B" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="FILE_B"/>
     </appender>
 
     <!-- 扫描的包以及日志等级 -->
@@ -57,8 +70,13 @@
     </logger>
 
     <!-- 扫描的包以及日志等级输出到文件 A -->
-    <logger name="cn.com.xuxiaowei.amodule" level="DEBUG">
+    <logger name="cn.com.xuxiaowei.a" level="DEBUG">
         <appender-ref ref="ASYNC_A"/>
+    </logger>
+
+    <!-- 扫描的包以及日志等级输出到文件 B -->
+    <logger name="cn.com.xuxiaowei.b" level="INFO">
+        <appender-ref ref="ASYNC_B"/>
     </logger>
 
     <root level="INFO">
