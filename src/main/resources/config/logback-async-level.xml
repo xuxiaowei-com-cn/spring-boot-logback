@@ -4,11 +4,11 @@
     <property name="LOG_PATH" value="/logs/spring-boot-logback.log"/>
     <!-- 日志输出格式-控制台 -->
     <property name="STDOUT_PATTERN"
-              value="%d{yyyy-MM-dd HH:mm:ss.SSS} -%highlight(%5p) %magenta(${PID:- }) --- [%15.15t] %cyan(%-40.40logger{39}) : %m%n"/>
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} -%highlight(%5p) %magenta(${PID:- }) - [%15.15t] %cyan(%-40.40logger{39}) : %m%n"/>
 
     <!-- 日志输出格式-文件 -->
     <property name="FILE_PATTERN"
-              value="%d{yyyy-MM-dd HH:mm:ss.SSS} -%5p ${PID:- } --- [%15.15t] %-40.40logger{39} : %m%n"/>
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} -%5p ${PID:- } - [%15.15t] %-40.40logger{39} : %m%n"/>
 
     <!-- 控制台日志 -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
